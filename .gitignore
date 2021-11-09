@@ -1,0 +1,6 @@
+objects/**
+files/**
+source/*.txt
+*.sh
+*.exe
+trab3-pesquisa-ordenacao
