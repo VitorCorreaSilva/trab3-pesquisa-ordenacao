@@ -37,13 +37,20 @@ date** generate_random_date(int n){
     for (int i = 0; i < n; ++i)
     {
         date* d = (date*)malloc(sizeof(date*));
-        d->month = rand() % 12;
+        d->month = 1 + rand() % 12;
         if(d->month == 2){
-            d->day = rand() % 28;
+            d->day = 1 + rand() % 28;
         }
-        else if(d->month == )
+        else if(d->month == 4 && d->month == 6 && d->month == 9 && d->month == 11){
+            d->day = 1 + rand() % 30;
+        }
+        else{
+            d->day = 1 + rand() % 31;
+        }
 
-        d->year = 1900 + (rand() % 2100);
+        d->year = 1 + rand() % 2021;
+
+        out[i] = d;
     }
 
     return out;

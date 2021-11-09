@@ -5,16 +5,24 @@
 #include "date.h"
 
 int main(){
-   char datahora[] = "66/66/2016";  
+   
+   int n = 10;
 
-   struct tm tm; 
-   int ano, mes; 
+   date** dates = generate_random_date(n);
 
-   sscanf( datahora, "%d/%d/%d", &tm.tm_mday, &mes, &ano);
+   printf("Desordenadas=> ");
+   for (int i = 0; i < n; ++i)
+   {
+      printf("%i/%i/%i ", dates[i]->day,dates[i]->month,dates[i]->year);
+   }
+   printf("\n");
 
-   tm.tm_year = ano - 1900;
-   tm.tm_mon = mes - 1;
+   date** insertion = insertion_sort_date(dates,n);
 
-   printf( "Segundos desde 01/01/1970: %ld\n", mktime( &tm ) );
-
+   printf("Ordenadas=> ");
+   for (int i = 0; i < n; ++i)
+   {
+      printf("%i/%i/%i ", insertion[i]->day,insertion[i]->month,insertion[i]->year);
+   }
+   printf("\n");
 }

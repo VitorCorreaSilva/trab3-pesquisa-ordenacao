@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "date.h"
 
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
@@ -11,6 +12,7 @@
 
 int* generate_random_number(int n);
 char** generate_random_string(int n);
+date** generate_random_date(int n);
 int* load_file(char* filename, int n);
 void write_in_file(char* filename, int* numbers, int size);
 FILE* open_file(char* filename, char* mode);
