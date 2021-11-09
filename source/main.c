@@ -34,4 +34,13 @@ int main(){
       printf("%i/%i/%i ", merge[i]->day,merge[i]->month,merge[i]->year);
    }
    printf("\n");
+
+   date** heap = heap_sort_date(dates,n);
+
+   printf("HeapSort=> ");
+   for (int i = 0; i < n; ++i)
+   {
+      printf("%i/%i/%i ", heap[i]->day,heap[i]->month,heap[i]->year);
+   }
+   printf("\n");
 }

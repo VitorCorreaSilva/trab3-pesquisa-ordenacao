@@ -36,6 +36,12 @@ int* heap_sort(int* arr, int n) {
     return arr;
 }
 
+void swap_string(char **a, char **b) {
+    char* temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 void heapify_string(char** words, int n, int i) {
     int largest = i;
     int left = 2 * i + 1;
@@ -66,8 +72,38 @@ char** heap_sort_string(char** words, int n) {
     return words;
 }
 
-void swap_string(char **a, char **b) {
-    char* temp = *a;
+void swap_date(date **a, date **b) {
+    date* temp = *a;
     *a = *b;
     *b = temp;
+}
+
+void heapify_date(date** dates, int n, int i) {
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if (left < n && datecmp(dates[left],dates[largest]) >= 0)
+        largest = left;
+
+    if (right < n && datecmp(dates[right],dates[largest]) >=0)
+        largest = right;
+
+    if (largest != i) {
+        swap_date(&dates[i], &dates[largest]);
+        heapify_date(dates, n, largest);
+    }
+}
+
+date** heap_sort_date(date** dates, int n) {
+    for (int i = n / 2 - 1; i >= 0; i--) {
+        heapify_date(dates, n, i);
+    }
+    for (int i = n - 1; i >= 0; i--) {
+        swap_date(&dates[0], &dates[i]);
+
+        heapify_date(dates, i, 0);
+    }
+
+    return dates;
 }
