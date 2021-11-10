@@ -29,19 +29,19 @@ int third_menu(void){
 	system("clear");
 	int temp;
 
-	printf("Voce vair gerar quantos dados? ");
+	printf("Voce vai gerar quantos dados? ");
 	scanf("%d", &temp);
 
 	return temp;
 }
 
-void print_number_sort(int* numbers, int n, char* sort){
+void print_number_sort(float* numbers, int n, char* sort){
 	printf("%-2s => ", sort);
 	for (int i = 0; i < n; ++i)
 	{
-		printf("%-2d ", numbers[i]);
+		printf("%-2.2f ", numbers[i]);
 	}
-	printf("\n");
+	printf("\n\n");
 }
 
 void print_string_sort(char** words, int n, char* sort){
@@ -50,5 +50,14 @@ void print_string_sort(char** words, int n, char* sort){
 	{
 		printf("%-2s ", words[i]);
 	}
-	printf("\n");
+	printf("\n\n");
+}
+
+void print_date_sort(date** dates, int n, char* sort){
+	printf("%-2s => ", sort);
+	for (int i = 0; i < n; ++i)
+	{
+		printf("%i/%i/%i ", dates[i]->day, dates[i]->month, dates[i]->year);
+	}
+	printf("\n\n");
 }

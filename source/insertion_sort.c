@@ -1,14 +1,14 @@
 #include "insertion_sort.h"
 
-static int comp = 0;
-
-int* insertion_sort(int* numbers, int size)
+float* insertion_sort(float* numbers, int size, counter* cont)
 {
-    int i, key, j;
+    int i, j;
+    float key;
     for (i = 1; i < size; i++) {
         key = numbers[i];
         j = i - 1;
         while (j >= 0 && numbers[j] > key) {
+            cont->exec_insertion_sort++;
             numbers[j + 1] = numbers[j];
             j = j - 1;
         }
@@ -18,7 +18,7 @@ int* insertion_sort(int* numbers, int size)
     return numbers;
 }
 
-char** insertion_sort_string(char** words, int size)
+char** insertion_sort_string(char** words, int size, counter* cont)
 {
     char* key;
     int i, j;
@@ -27,6 +27,7 @@ char** insertion_sort_string(char** words, int size)
         j = i - 1;
 
         while (j >= 0 && strcmp(words[j], key) >= 1) {
+            cont->exec_insertion_sort++;
             words[j + 1] = words[j];
             j = j - 1;
         }
@@ -37,7 +38,7 @@ char** insertion_sort_string(char** words, int size)
     return words;
 }
 
-date** insertion_sort_date(date** dates, int size)
+date** insertion_sort_date(date** dates, int size, counter* cont)
 {
     date* key;
     int i, j;
@@ -46,6 +47,7 @@ date** insertion_sort_date(date** dates, int size)
         j = i - 1;
         
         while (j >= 0 && datecmp(dates[j], key) >= 1) {
+            cont->exec_insertion_sort++;
             dates[j + 1] = dates[j];
             j = j - 1;
         }

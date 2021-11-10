@@ -27,3 +27,12 @@ int datecmp(date* d1, date* d2){
 		}
 	}
 }
+
+date* create_date(int day, int month, int year){
+	date* d = (date*) malloc(sizeof(date)); 
+	d->day = day;
+	d->month = month;
+	d->year = year;
+
+	return d;
+}

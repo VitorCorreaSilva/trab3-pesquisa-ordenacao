@@ -1,12 +1,12 @@
 #include "merge_sort.h"
 
-void merge(int* arr, int l, int m, int r)
+void merge(float* arr, int l, int m, int r)
 {
 	int i, j, k;
 	int n1 = m - l + 1;
 	int n2 = r - m;
 
-	int L[n1], R[n2];
+	float L[n1], R[n2];
 
 	for (i = 0; i < n1; i++)
 		L[i] = arr[l + i];
@@ -41,7 +41,7 @@ void merge(int* arr, int l, int m, int r)
 	}
 }
 
-int* merge_sort(int* arr, int l, int r)
+float* merge_sort(float* arr, int l, int r)
 {
 	if (l < r) {
 		int m = l + (r - l) / 2;

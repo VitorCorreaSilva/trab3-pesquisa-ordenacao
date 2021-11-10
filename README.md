@@ -1,5 +1,5 @@
-# Sistema para geração de arquivos em C
-Este repositório foi criado e editado por mim para o trabalho A1 da disciplina de Pesquisa, Ordenação e Técnicas de Armazenamento pelo professor Jader Marques da Silva do curso de Ciência da Computação da Universidade Ritter dos Reis. O objetivo é desenvolver um sistema simples para gerar arquivos com as especificações assinaladas pelo professor.
+# Sistema de ordenação de dados em C
+Este repositório foi criado e editado por mim para o trabalho A3 da disciplina de Pesquisa, Ordenação e Técnicas de Armazenamento ministradas pelo mestre Jader Marques da Silva do curso de Ciência da Computação da Universidade Ritter dos Reis. O objetivo é desenvolver um sistema simples a ordenação de dados com as especificações assinaladas pelo professor.
 
 
 ## O Desafio
@@ -14,7 +14,7 @@ O desafio do exercicio é resolver todos os problemas propostos no enunciado do 
 
 
 ## A Estrutura
-A estrutura do projeto conta com um diretório chamado `source/` onde estão todos os arquivos com código escrito. Dentro deste foram criados arquivos de cabeçalho no formato `.h`. Estes contém todas as definições das classes que usamos no código. E também foram criados os arquivos `.c` onde esta a implementação das funções definidas anteriormente. No momento em que o build é executado será também criado um novo diretório na pasta raiz do projeto chamado `objects/` e o arquivo da aplicação chamado `trab1-pesquisa-ordenacao`.
+A estrutura do projeto conta com um diretório chamado `source/` onde estão todos os arquivos com código escrito. Dentro deste foram criados arquivos de cabeçalho no formato `.h`. Estes contém todas as definições das classes que usamos no código. E também foram criados os arquivos `.c` onde esta a implementação das funções definidas anteriormente. No momento em que o build é executado será também criado um novo diretório na pasta raiz do projeto chamado `objects/` e o arquivo da aplicação chamado `trab3-pesquisa-ordenacao`.
 
 
 ## O Build

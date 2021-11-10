@@ -7,9 +7,9 @@
 #ifndef HEAPSORT_H
 #define HEAPSORT_H
 
-void swap(int *a, int *b);
-void heapify(int* arr, int n, int i);
-int* heap_sort(int* arr, int n);
+void swap(float *a, float *b);
+void heapify(float* arr, int n, int i);
+float* heap_sort(float* arr, int n);
 
 void swap_string(char **a, char **b);
 void heapify_string(char** words, int n, int i);

@@ -13,5 +13,6 @@ typedef struct{
 } date;
 
 int datecmp(date* d1, date* d2);
+date* create_date(int day, int month, int year);
 
 #endif

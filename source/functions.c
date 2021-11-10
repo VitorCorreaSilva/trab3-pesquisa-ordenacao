@@ -1,9 +1,9 @@
 #include "functions.h"
 
-int* generate_random_number(int n)
+float* generate_random_number(int n)
 {
     srand(time(NULL));
-    int* out = (int*) malloc(n * sizeof(int));
+    float* out = (float*) malloc(n * sizeof(float));
     for (int i = 0; i < n; i++)
     {
         out[i] = rand() % 1000;  
@@ -17,7 +17,7 @@ char** generate_random_string(int n){
 	char** out  = (char**) malloc(n * sizeof(char*));
 	for (i = 0; i < n; ++i)
 	{
-		size = rand() % 20;
+		size = 3 + rand() % 23;
 	    char *res = malloc(size + 1);
 	    for (j = 0; j < size; ++j)
 	    {
@@ -100,6 +100,15 @@ int* load_file(char* filename, int n)
         token = strtok(NULL, ";");
         i++;
     }
+
+    return out;
+}
+
+counter* create_counter(void){
+    counter* out = (counter*) malloc(sizeof(counter*));
+    out->exec_insertion_sort = 0;
+    out->exec_merge_sort = 0;
+    out->exec_heap_sort = 0;
 
     return out;
 }
