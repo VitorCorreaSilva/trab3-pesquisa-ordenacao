@@ -1,12 +1,13 @@
 #include "heap_sort.h"
 
-void swap(int *a, int *b) {
-    int temp = *a;
+void swap(float *a, float *b) {
+    float temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void heapify(int* arr, int n, int i) {
+void heapify(float* arr, int n, int i, counter* cont) {
+    cont->exec_heap_sort++;
     int largest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
@@ -19,24 +20,31 @@ void heapify(int* arr, int n, int i) {
 
     if (largest != i) {
         swap(&arr[i], &arr[largest]);
-        heapify(arr, n, largest);
+        heapify(arr, n, largest, cont);
     }
 }
 
-int* heap_sort(int* arr, int n) {
+float* heap_sort(float* arr, int n, counter* cont) {
     for (int i = n / 2 - 1; i >= 0; i--) {
-        heapify(arr, n, i);
+        heapify(arr, n, i, cont);
     }
     for (int i = n - 1; i >= 0; i--) {
         swap(&arr[0], &arr[i]);
 
-        heapify(arr, i, 0);
+        heapify(arr, i, 0, cont);
     }
 
     return arr;
 }
 
-void heapify_string(char** words, int n, int i) {
+void swap_string(char **a, char **b) {
+    char* temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void heapify_string(char** words, int n, int i, counter* cont) {
+    cont->exec_heap_sort++;
     int largest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
@@ -49,25 +57,56 @@ void heapify_string(char** words, int n, int i) {
 
     if (largest != i) {
         swap_string(&words[i], &words[largest]);
-        heapify_string(words, n, largest);
+        heapify_string(words, n, largest, cont);
     }
 }
 
-char** heap_sort_string(char** words, int n) {
+char** heap_sort_string(char** words, int n, counter* cont) {
     for (int i = n / 2 - 1; i >= 0; i--) {
-        heapify_string(words, n, i);
+        heapify_string(words, n, i, cont);
     }
     for (int i = n - 1; i >= 0; i--) {
         swap_string(&words[0], &words[i]);
 
-        heapify_string(words, i, 0);
+        heapify_string(words, i, 0, cont);
     }
 
     return words;
 }
 
-void swap_string(char **a, char **b) {
-    char* temp = *a;
+void swap_date(date **a, date **b) {
+    date* temp = *a;
     *a = *b;
     *b = temp;
+}
+
+void heapify_date(date** dates, int n, int i, counter* cont) {
+    cont->exec_heap_sort++;
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if (left < n && datecmp(dates[left],dates[largest]) >= 0)
+        largest = left;
+
+    if (right < n && datecmp(dates[right],dates[largest]) >=0)
+        largest = right;
+
+    if (largest != i) {
+        swap_date(&dates[i], &dates[largest]);
+        heapify_date(dates, n, largest, cont);
+    }
+}
+
+date** heap_sort_date(date** dates, int n, counter* cont) {
+    for (int i = n / 2 - 1; i >= 0; i--) {
+        heapify_date(dates, n, i, cont);
+    }
+    for (int i = n - 1; i >= 0; i--) {
+        swap_date(&dates[0], &dates[i]);
+
+        heapify_date(dates, i, 0, cont);
+    }
+
+    return dates;
 }

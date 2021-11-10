@@ -3,12 +3,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "date.h"
+#include "functions.h"
 
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
 
-int* insertion_sort(int* numbers, int size);
-char** insertion_sort_string(char** words, int size);
-date** insertion_sort_date(date** dates, int size);
+float* insertion_sort(float* numbers, int size, counter* cont);
+
+char** insertion_sort_string(char** words, int size, counter* cont);
+
+date** insertion_sort_date(date** dates, int size, counter* cont);
 
 #endif
