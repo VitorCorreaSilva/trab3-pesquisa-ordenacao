@@ -45,7 +45,7 @@ int main(){
             time_execution_insertion_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            float* merge = merge_sort(numbers, 0, temp - 1);
+            float* merge = merge_sort(numbers, 0, temp - 1, cont);
             end = clock();
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
@@ -89,7 +89,7 @@ int main(){
             time_execution_insertion_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            char** merge = merge_sort_string(words, 0, temp - 1);
+            char** merge = merge_sort_string(words, 0, temp - 1, cont);
             end = clock();
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
@@ -139,7 +139,7 @@ int main(){
             time_execution_insertion_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            date** merge = merge_sort_date(dates, 0, temp - 1);
+            date** merge = merge_sort_date(dates, 0, temp - 1, cont);
             end = clock();
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
