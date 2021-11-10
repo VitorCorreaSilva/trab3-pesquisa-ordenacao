@@ -1,5 +1,7 @@
 #include "insertion_sort.h"
 
+static int comp = 0;
+
 int* insertion_sort(int* numbers, int size)
 {
     int i, key, j;
