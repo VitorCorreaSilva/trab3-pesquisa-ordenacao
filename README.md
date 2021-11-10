@@ -3,14 +3,18 @@ Este repositório foi criado e editado por mim para o trabalho A3 da disciplina 
 
 
 ## O Desafio
-O desafio do exercicio é resolver todos os problemas propostos no enunciado do projeto disponibilizado pelo mestre do curso. Então, temos como objetivos:
+O desafio consiste no desenvolvimento de um programa em C que leia “N” valores e armazene em memória. O programa deverá ter a possibilidade de ordenar números, caracteres (strings) e datas. O grupo deverá escolher no mínimo 3 (três) métodos de ordenação para implementar no programa. Dessa forma, o programa deverá ter a opção de leitura dos dados (manual e automática –através da leitura de arquivo ou geração randômica) e após a opção de ordenar dados usando os 3 (três) métodos de ordenação escolhidos pelo grupo. Para cada um dos métodos utilizados, o programa deverá apresentar os dados inseridos, os dados ordenados, informar quantas comparações (movimentações) foram necessárias para realizar a ordenação, bem como o tempo necessário para ordenar os dados (tempo para cada um dos métodos de ordenação). Ao usuário selecionar a opção de ordenar dados, o programa sempre irá apresentar o resultado da ordenação dos três métodos. O programa deverá ter a opção de ordenar valores numéricos inteiros, reais, datas (em formato DD/MM/AAAA) e caracteres, como nomes e palavras.:
 
-- Criar um arquivo texto e gerar uma sequência aleatória de números separados por “;” (ponto e vírgula).O usuário deverá inserir quantos números deseja gerar no arquivo (no mínimo 100 números).
-- Após a geração do arquivo, o programa deverá ter uma função para carregar o arquivo. Ao carregar o arquivo, o programa deverá armazenar os valores em um array.
-- O programa também deverá ter uma opção para inversão dos elementos do arquivo (ou seja, o programa deverá ter uma função de gerar um novo arquivo com os elementos invertidos).
-- Outra opção de geração de um novo arquivo com os elementos ordenados.
-- Também uma opção de geração de um novo arquivo com o maior e o menor número encontrado no arquivo e a média de todos os números do arquivo.
-- E mais uma opção de geração de um novo arquivo em que cada número do arquivo original é convertido para binário.
+- O grupo deverá desenvolver uma opção para inserção de vários valores, sem precisar inserir manualmente. Esta técnica pode ser através da leitura de um arquivo texto ou por meio de geração randômica. Mesmo com este recurso, o programa também deverá permitir a inserção manual de valores.
+- O grupo deverá escolher e implementar (em C) 3 (três) métodos de ordenação estudados em aula.
+- O grupo deverá utilizar funções recursivas para a implementação do programa.
+- O grupo deverá considerar a característica do algoritmo a ser utilizado antes da implementação.
+- O grupo poderá melhorar o programa, incluindo novas funcionalidades, desde que tenha como demonstrar a utilização do algoritmo de ordenação utilizado.
+- Podem ser utilizadas diversas estruturas de dados, além de vetores (árvores, por exemplo).
+- O programa deverá possuir uma função de contagem do tempo de execução de cada algoritmo, para análise entre as opções de ordenação. Essa função servirá para apresentar o tempo necessário para a execução de algoritmo.
+- Na apresentação (em aula ou ao vivo no blackboard) ao professor, o grupo deverá ter clareza no funcionamento do algoritmo de ordenação utilizado. O professor poderá realizar perguntar específicas sobre o funcionamento do algoritmo utilizado.
+- O grupo deverá apresentar a execução do programa com grande volume de dados, através da importação de arquivo ou geração de dados aleatórios. O número mínimo de dados a serem inseridos para esta ordenação é de 100 valores (na inserção via arquivo ou randômica), podendo ser um valor maior. O programa deverá ter a opção de inserção de valores manualmente. Neste caso, não há necessidade de inserção mínima de 100 valores.
+- O grupo deverá apresentar a execução da ordenação com grande volume de valores numéricos e com a inserção manual.
 
 
 ## A Estrutura
