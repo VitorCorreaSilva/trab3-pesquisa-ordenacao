@@ -50,7 +50,7 @@ int main(){
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            float* heap = heap_sort(numbers, temp);
+            float* heap = heap_sort(numbers, temp, cont);
             end = clock();
             time_execution_heap_sort = (double)(end - begin) / CLOCKS_PER_SEC;
             
@@ -94,7 +94,7 @@ int main(){
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            char** heap = heap_sort_string(words, temp);
+            char** heap = heap_sort_string(words, temp, cont);
             end = clock();
             time_execution_heap_sort = (double)(end - begin) / CLOCKS_PER_SEC;
             
@@ -144,7 +144,7 @@ int main(){
             time_execution_merge_sort = (double)(end - begin) / CLOCKS_PER_SEC;
 
             begin = clock();
-            date** heap = heap_sort_date(dates, temp);
+            date** heap = heap_sort_date(dates, temp, cont);
             end = clock();
             time_execution_heap_sort = (double)(end - begin) / CLOCKS_PER_SEC;
             
