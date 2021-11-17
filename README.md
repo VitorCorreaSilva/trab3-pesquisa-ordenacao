@@ -29,4 +29,4 @@ Para executar o build que gera os binários e o executavel do projeto sem muitas
 - `make clean`: Serve para limpar os arquivos dos ultimos builds e não possui um retorno quando tem sucesso. É aconselhavel sempre executar antes de um `make all` para garantir que todos os arquivos serão compilados novamente. Para a execução devemos estar no mesmo diretório do arquivo `makefile`  e digitar `make clean` conforme código abaixo.
 
 ## Video com explicação
-Para exemplificar gravei um [video](https://youtu.be/JmgwMrE93yU) explicando o funcionamento do programa.
+Para exemplificar gravei um [video](https://youtu.be/KTIr944OyZI) explicando o funcionamento do programa.
